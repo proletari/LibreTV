@@ -21,6 +21,10 @@ const SITE_CONFIG = {
 
 // API站点配置
 const API_SITES = {
+    mtzy: {
+        api: 'https://caiji.maotaizy.cc/api.php/provide/vod/from/mtm3u8/at/josn/',
+        name: '茅台资源',
+    },
     dyttzy: {
         api: 'http://caiji.dyttzyapi.com/api.php/provide/vod',
         name: '电影天堂资源',
@@ -121,7 +125,7 @@ const API_SITES = {
     // 把性别剥削塑造成“性享受”麻痹观众的意识，转移我们对现实生活中矛盾和压迫的注意力。
     // 这些影片和背后的产业已经使数百万男女“下海”，出卖自己的身体，甚至以此为生计。
     // 而作为观众无辜吗？毫无疑问，他们促成了黄色产业链的再生产。
-    // 我们提供此警告，是希望您能认清这些内容的本质——它们是压迫和奴役的工具，而非娱乐。
+    // 我们提供此警告，是希望您能recognize这些内容的本质——它们是压迫和奴役的工具，而非娱乐。
     // ckzy: {
     //     api: 'https://www.ckzy1.com',
     //     name: 'CK资源',
