@@ -26,8 +26,8 @@ LibreTV 是一个轻量级、免费的在线视频搜索与观看平台，提供
 
 选择以下任一平台，点击一键部署按钮，即可快速创建自己的 LibreTV 实例：
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FLibreSpark%2FLibreTV) [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/LibreSpark/LibreTV) 
-
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FLibreSpark%2FLibreTV)  
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/LibreSpark/LibreTV)  
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/LibreSpark/LibreTV) 
 
 ## ⚠️ 安全与隐私提醒
@@ -42,7 +42,7 @@ LibreTV 是一个轻量级、免费的在线视频搜索与观看平台，提供
 
 ### 📝 部署建议
 
-1. **、设置环境变量 `PASSWORD`**：为您的实例设置一个强密码
+1. **设置环境变量 `PASSWORD`**：为您的实例设置一个强密码
 2. **仅供个人使用**：请勿将您的实例链接公开分享或传播
 3. **遵守当地法律**：请确保您的使用行为符合当地法律法规
 
@@ -106,15 +106,14 @@ docker run -d \
  `docker-compose.yml` 文件：
 
 ```yaml
-version: '3'
 services:
   libretv:
     image: bestzwei/libretv:latest
     container_name: libretv
     ports:
-      - "8899:80"
+      - "8899:8080"
     environment:
-      - PASSWORD=111111
+      - PASSWORD=${PASSWORD:-111111}
     restart: unless-stopped
 ```
 
