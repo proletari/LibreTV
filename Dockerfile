@@ -23,14 +23,6 @@ RUN npm ci --only=production && npm cache clean --force
 # 复制应用文件
 COPY . .
 
-# 创建非 root 用户
-RUN addgroup -g 1001 -S nodejs && \
-    adduser -S libretv -u 1001
-
-# 更改文件所有者
-RUN chown -R libretv:nodejs /app
-USER libretv
-
 # 暴露端口
 EXPOSE 8080
 
